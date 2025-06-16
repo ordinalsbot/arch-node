@@ -12,10 +12,11 @@ ENV RPC_BIND_PORT=9000
 # ENV BOOT_NODE_ENDPOINT=
 # ENV P2P_BIND_PORT=7000
 # ENV ELECTRS_ENDPOINT=
+ENV TITAN_ENDPOINT=http://127.0.0.1:3030
 
 ENTRYPOINT ["/bin/sh", "-c"]
 CMD ["exec /usr/local/bin/validator \
       --rpc-bind-ip \"$RPC_BIND_IP\" \
       --rpc-bind-port \"$RPC_BIND_PORT\" \
-      --electrs-endpoint \"$ELECTRS_ENDPOINT\"" \
+      --titan-endpoint \"$TITAN_ENDPOINT\"" \
 ]
